@@ -15,10 +15,12 @@ export const generateMetadata = async ({
   generatePageMetadata({ config: configPromise, params, searchParams });
 
 export default async function Page({ params, searchParams }: Args) {
-  return RootPage({
-    config: configPromise,
-    params,
-    searchParams,
-    importMap,
-  });
+  return (
+    <RootPage
+      config={configPromise}
+      params={params}
+      searchParams={searchParams}
+      importMap={importMap}
+    />
+  );
 }
