@@ -8,156 +8,162 @@ const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
 
 export default buildConfig({
-  secret: process.env.PAYLOAD_SECRET!,
+    secret: process.env.PAYLOAD_SECRET!,
 
-  // URL base del admin panel
-  serverURL: process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:3000",
+    // URL base del admin panel
+    serverURL: process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}`
+        : "http://localhost:3000",
 
-  // Panel de administración en /admin
-  admin: {
-    user: "users",
-  },
-
-  // Editor de texto enriquecido
-  editor: lexicalEditor({}),
-
-  // Colecciones — cada una es una "tabla" en la base de datos
-  collections: [
-    // Usuarios administradores
-    {
-      slug: "users",
-      auth: true,
-      admin: {
-        useAsTitle: "email",
-      },
-      fields: [],
+    // Panel de administración en /admin
+    admin: {
+        user: "users",
     },
 
-    // Proyectos del portafolio
-    {
-      slug: "projects",
-      admin: {
-        useAsTitle: "title",
-        description: "Proyectos destacados del portafolio",
-      },
-      fields: [
+    // Editor de texto enriquecido
+    editor: lexicalEditor({}),
+
+    // Colecciones — cada una es una "tabla" en la base de datos
+    collections: [
+        // Usuarios administradores
         {
-          name: "title",
-          type: "text",
-          required: true,
-          label: "Título del proyecto",
-        },
-        {
-          name: "badge",
-          type: "text",
-          required: true,
-          label: "Badge (freelance, Danngos Smart, ETI)",
-        },
-        {
-          name: "badgeColor",
-          type: "select",
-          required: true,
-          label: "Color del badge",
-          options: [
-            { label: "Violeta", value: "purple" },
-            { label: "Azul", value: "blue" },
-            { label: "Verde", value: "green" },
-          ],
-        },
-        {
-          name: "description",
-          type: "textarea",
-          required: true,
-          label: "Descripción",
-        },
-        {
-          name: "tags",
-          type: "array",
-          label: "Tecnologías",
-          fields: [
-            {
-              name: "tag",
-              type: "text",
-              label: "Tecnología",
+            slug: "users",
+            auth: true,
+            admin: {
+                useAsTitle: "email",
             },
-          ],
+            fields: [],
         },
+
+        // Proyectos del portafolio
         {
-          name: "mockup",
-          type: "select",
-          required: true,
-          label: "Tipo de mockup",
-          options: [
-            { label: "Ride-hailing", value: "rideHailing" },
-            { label: "Chat IA", value: "chat" },
-            { label: "Dashboard", value: "dashboard" },
-          ],
+            slug: "projects",
+            admin: {
+                useAsTitle: "title",
+                description: "Proyectos destacados del portafolio",
+            },
+            access: {
+                read: () => true,
+            },
+            fields: [
+                {
+                    name: "title",
+                    type: "text",
+                    required: true,
+                    label: "Título del proyecto",
+                },
+                {
+                    name: "badge",
+                    type: "text",
+                    required: true,
+                    label: "Badge (freelance, Danngos Smart, ETI)",
+                },
+                {
+                    name: "badgeColor",
+                    type: "select",
+                    required: true,
+                    label: "Color del badge",
+                    options: [
+                        { label: "Violeta", value: "purple" },
+                        { label: "Azul", value: "blue" },
+                        { label: "Verde", value: "green" },
+                    ],
+                },
+                {
+                    name: "description",
+                    type: "textarea",
+                    required: true,
+                    label: "Descripción",
+                },
+                {
+                    name: "tags",
+                    type: "array",
+                    label: "Tecnologías",
+                    fields: [
+                        {
+                            name: "tag",
+                            type: "text",
+                            label: "Tecnología",
+                        },
+                    ],
+                },
+                {
+                    name: "mockup",
+                    type: "select",
+                    required: true,
+                    label: "Tipo de mockup",
+                    options: [
+                        { label: "Ride-hailing", value: "rideHailing" },
+                        { label: "Chat IA", value: "chat" },
+                        { label: "Dashboard", value: "dashboard" },
+                    ],
+                },
+                {
+                    name: "mockupLabel",
+                    type: "text",
+                    label: "Label del mockup",
+                },
+                {
+                    name: "order",
+                    type: "number",
+                    label: "Orden de aparición",
+                    defaultValue: 0,
+                },
+            ],
         },
+
+        // Experiencia laboral
         {
-          name: "mockupLabel",
-          type: "text",
-          label: "Label del mockup",
+            slug: "experience",
+            admin: {
+                useAsTitle: "title",
+                description: "Experiencia laboral del portafolio",
+            },
+            access: {
+                read: () => true,
+            },
+            fields: [
+                {
+                    name: "date",
+                    type: "text",
+                    required: true,
+                    label: "Período (ej: 2024 → actualidad)",
+                },
+                {
+                    name: "title",
+                    type: "text",
+                    required: true,
+                    label: "Cargo y empresa",
+                },
+                {
+                    name: "company",
+                    type: "text",
+                    required: true,
+                    label: "Proyecto o empresa",
+                },
+                {
+                    name: "description",
+                    type: "textarea",
+                    required: true,
+                    label: "Descripción",
+                },
+                {
+                    name: "order",
+                    type: "number",
+                    label: "Orden de aparición",
+                    defaultValue: 0,
+                },
+            ],
         },
-        {
-          name: "order",
-          type: "number",
-          label: "Orden de aparición",
-          defaultValue: 0,
-        },
-      ],
+    ],
+
+    // Base de datos MongoDB
+    db: mongooseAdapter({
+        url: process.env.MONGODB_URI!,
+    }),
+
+    // Directorio de tipos generados automáticamente
+    typescript: {
+        outputFile: path.resolve(dirname, "payload-types.ts"),
     },
-
-    // Experiencia laboral
-    {
-      slug: "experience",
-      admin: {
-        useAsTitle: "title",
-        description: "Experiencia laboral del portafolio",
-      },
-      fields: [
-        {
-          name: "date",
-          type: "text",
-          required: true,
-          label: "Período (ej: 2024 → actualidad)",
-        },
-        {
-          name: "title",
-          type: "text",
-          required: true,
-          label: "Cargo y empresa",
-        },
-        {
-          name: "company",
-          type: "text",
-          required: true,
-          label: "Proyecto o empresa",
-        },
-        {
-          name: "description",
-          type: "textarea",
-          required: true,
-          label: "Descripción",
-        },
-        {
-          name: "order",
-          type: "number",
-          label: "Orden de aparición",
-          defaultValue: 0,
-        },
-      ],
-    },
-  ],
-
-  // Base de datos MongoDB
-  db: mongooseAdapter({
-    url: process.env.MONGODB_URI!,
-  }),
-
-  // Directorio de tipos generados automáticamente
-  typescript: {
-    outputFile: path.resolve(dirname, "payload-types.ts"),
-  },
 });
