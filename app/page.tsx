@@ -1,33 +1,37 @@
-"use client";
-import { useState } from "react";
-import Nav from "@/components/Nav";
-import Hero from "@/components/Hero";
-import CodeMode from "@/components/CodeMode";
-import Footer from "@/components/Footer";
-import Terminal from "@/components/Terminal";
-import ServerSections from "./page-server";
+import ClientLayout from "@/components/ClientLayout";
+import Projects from "@/components/Projects";
+import About from "@/components/About";
+import Experience from "@/components/Experience";
+import Stack from "@/components/Stack";
+import Learning from "@/components/Learning";
+import Education from "@/components/Education";
+import Contact from "@/components/Contact";
+import Stats from "@/components/Stats";
+
+// Server Component — sin "use client"
+// Los Server Components hijos leen datos de Payload directamente
+const Divider = () => (
+  <div className="h-px bg-white/10 max-w-300 mx-auto" />
+);
 
 export default function Home() {
-  const [termOpen, setTermOpen] = useState(false);
-  const [codeVisible, setCodeVisible] = useState(false);
-
   return (
-    <>
-      <Nav onOpenTerminal={() => setTermOpen(true)} />
-      <main>
-        <Hero
-          onToggleCode={() => setCodeVisible((v) => !v)}
-          codeVisible={codeVisible}
-        />
-        <CodeMode
-          visible={codeVisible}
-          onClose={() => setCodeVisible(false)}
-        />
-        {/* ServerSections corre en el servidor — puede leer de Payload */}
-        <ServerSections />
-      </main>
-      <Footer />
-      <Terminal open={termOpen} onClose={() => setTermOpen(false)} />
-    </>
+    <ClientLayout>
+      <Stats />
+      <Divider />
+      <About />
+      <Divider />
+      <Experience />
+      <Divider />
+      <Projects />
+      <Divider />
+      <Stack />
+      <Divider />
+      <Learning />
+      <Divider />
+      <Education />
+      <Divider />
+      <Contact />
+    </ClientLayout>
   );
 }
