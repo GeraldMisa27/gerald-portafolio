@@ -128,7 +128,7 @@ export default function Terminal({
       className="fixed inset-0 bg-black/80 z-50 flex items-start justify-center pt-16"
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
-      <div className="bg-[#0d0d14] border border-white/10 rounded-xl w-full max-w-[580px] overflow-hidden">
+      <div className="bg-[#0d0d14] border border-white/10 rounded-xl w-full max-w-145 overflow-hidden">
 
         {/* Header estilo macOS con los tres puntos de colores */}
         <div className="bg-[#111118] px-4 py-2.5 flex items-center gap-2 border-b border-white/10">
@@ -151,7 +151,7 @@ export default function Terminal({
         {/* Área de output con scroll */}
         <div
           ref={bodyRef}
-          className="p-4 font-mono text-[13px] max-h-[320px] overflow-y-auto space-y-1"
+          className="p-4 font-mono text-[13px] max-h-80 overflow-y-auto space-y-1"
         >
           {lines.map((line, i) => {
             // Línea vacía

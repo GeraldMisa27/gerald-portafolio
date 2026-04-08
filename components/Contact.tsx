@@ -102,7 +102,7 @@ export default function Contact() {
       </p>
 
       <div className="bg-[#16161f] border border-white/10 rounded-2xl px-8 py-10">
-        <div className="max-w-[560px] mx-auto">
+        <div className="max-w-140 mx-auto">
           <h2 className="text-[22px] font-medium text-white mb-2 tracking-tight text-center">
             ¿Trabajamos juntos?
           </h2>

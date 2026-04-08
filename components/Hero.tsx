@@ -25,7 +25,7 @@ export default function Hero({
 
     return (
         <section className="w-full">
-            <div className="flex items-stretch max-w-250 mx-auto overflow-hidden min-h-[360px]">
+            <div className="flex items-stretch max-w-250 mx-auto overflow-hidden min-h-90">
                 {/* ── Lado izquierdo: texto ── */}
                 <div className="flex-1 px-8 py-14 flex flex-col justify-center">
                     <p className="text-[11px] text-white/50 uppercase tracking-widest mb-4">
@@ -112,7 +112,7 @@ export default function Hero({
                         </span>
 
                         {/* Avatar placeholder */}
-                        <div className="relative z-20 w-[160px] h-[200px] rounded-2xl border border-white/10 flex flex-col items-center justify-center gap-2"
+                        <div className="relative z-20 w-40 h-50 rounded-2xl border border-white/10 flex flex-col items-center justify-center gap-2"
                             style={{ background: "linear-gradient(160deg, #1e1e38, #252040)" }}>
                             <span className="text-[40px] font-medium text-[#a5b4fc]">GM</span>
                             <span className="text-[10px] text-white/40 font-mono">gerald.dev</span>

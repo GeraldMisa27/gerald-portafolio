@@ -31,7 +31,7 @@ export default function Nav({
             style={{
                 position: "sticky",
                 top: 0,
-                zIndex: 20,
+                zIndex: 50,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "space-between",

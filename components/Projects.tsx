@@ -12,7 +12,7 @@ function RideHailingMockup() {
   return (
     <div className="w-full h-full bg-[#0a0a18] flex flex-col p-2.5 gap-1.5">
       {/* Barra superior estilo navegador */}
-      <div className="h-2.5 bg-[#16161f] rounded flex items-center px-1.5 gap-1 flex-shrink-0">
+      <div className="h-2.5 bg-[#16161f] rounded flex items-center px-1.5 gap-1 shrink-0">
         {["#ff5f56", "#ffbd2e", "#27c93f"].map((c) => (
           <div key={c} className="w-1.5 h-1.5 rounded-full" style={{ background: c }} />
         ))}
@@ -109,7 +109,7 @@ function DashboardMockup() {
   return (
     <div className="w-full h-full bg-[#0d0d14] flex flex-col p-2 gap-1.5">
       {/* KPIs superiores */}
-      <div className="flex gap-1.5 flex-shrink-0">
+      <div className="flex gap-1.5 shrink-0">
         {[
           ["247", "incidencias"],
           ["98%", "resueltas"],
@@ -180,7 +180,7 @@ export default function Projects() {
               className="bg-[#16161f] border border-white/10 rounded-xl overflow-hidden hover:border-[#6366f1] transition-all duration-200 hover:-translate-y-0.5"
             >
               {/* Imagen/mockup del proyecto */}
-              <div className="h-[150px] relative overflow-hidden">
+              <div className="h-37.5 relative overflow-hidden">
                 <Mockup />
                 {/* Label flotante sobre el mockup */}
                 <span className="absolute top-2 left-2 bg-black/75 text-white text-[9px] px-2 py-0.5 rounded-full border border-white/10 backdrop-blur-sm z-10">
@@ -189,12 +189,12 @@ export default function Projects() {
               </div>
 
               {/* Contenido de la tarjeta */}
-              <div className="p-[18px]">
+              <div className="p-4.5">
                 <div className="flex justify-between items-start gap-2 mb-2">
                   <h3 className="text-sm font-medium text-white">
                     {project.title}
                   </h3>
-                  <span className={`text-[10px] px-2 py-0.5 rounded-full border flex-shrink-0 ${BADGE_STYLES[project.badgeColor]}`}>
+                  <span className={`text-[10px] px-2 py-0.5 rounded-full border shrink-0 ${BADGE_STYLES[project.badgeColor]}`}>
                     {project.badge}
                   </span>
                 </div>

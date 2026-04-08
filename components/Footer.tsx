@@ -38,7 +38,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer className="border-t border-white/10 max-w-250 mx-auto px-7 py-5 flex items-center justify-between">
+    <footer className="border-t border-white/10 mx-auto px-7 py-5 flex items-center justify-between">
       {/* Izquierda: créditos */}
       <p className="text-xs text-white/40">
         <span className="text-[#a5b4fc]">{SITE.name}</span>

@@ -18,9 +18,9 @@ export default function Experience() {
           <div key={i} className="flex gap-5 pb-6 last:pb-0">
 
             {/* Columna izquierda: punto y línea vertical */}
-            <div className="flex flex-col items-center w-9 flex-shrink-0">
+            <div className="flex flex-col items-center w-9 shrink-0">
               {/* Punto del timeline */}
-              <div className="w-2.5 h-2.5 rounded-full border-2 border-[#6366f1] bg-[#0a0a0f] mt-1 flex-shrink-0" />
+              <div className="w-2.5 h-2.5 rounded-full border-2 border-[#6366f1] bg-[#0a0a0f] mt-1 shrink-0" />
               {/* Línea vertical — no se muestra en el último item */}
               {i < EXPERIENCE.length - 1 && (
                 <div className="w-px flex-1 bg-white/10 mt-1" />
