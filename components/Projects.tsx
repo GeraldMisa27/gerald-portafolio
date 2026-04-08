@@ -151,9 +151,7 @@ interface Project {
 // Si Payload no tiene datos usa lib/data.ts como fallback
 async function getProjects(): Promise<Project[]> {
   try {
-    const baseUrl = process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : "http://localhost:3000";
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
     const res = await fetch(`${baseUrl}/api/projects?limit=100&sort=order`, {
       // ISR — revalida cada hora sin bloquear al usuario
