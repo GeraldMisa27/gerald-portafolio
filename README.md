@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gerald Misa Denis — Portfolio
 
-## Getting Started
+Portfolio personal construido con Next.js 15, Tailwind CSS v4 y TypeScript.
 
-First, run the development server:
+## Stack
 
+- **Framework:** Next.js 15 (App Router)
+- **Estilos:** Tailwind CSS v4
+- **Lenguaje:** TypeScript
+- **Email:** Resend
+- **Despliegue:** Vercel
+
+## Características
+
+- Diseño oscuro con tema índigo/violeta
+- Texto rotativo animado en el hero
+- Terminal interactiva oculta (presiona `/`)
+- Modo código — ver el perfil como TypeScript
+- Stack técnico interactivo con relaciones entre tecnologías
+- Formulario de contacto con validación y envío real de email
+- SEO técnico: metadata, Open Graph, JSON-LD, sitemap, robots.txt
+- Hora en vivo en La Habana en el footer
+- API Route de contacto con Node.js
+
+## Instalación
 ```bash
+# Clonar el repositorio
+git clone https://github.com/GeraldMisa27/gerald-portfolio.git
+
+# Entrar al proyecto
+cd gerald-portfolio
+
+# Instalar dependencias
+npm install
+
+# Crear el archivo de variables de entorno
+cp .env.local.example .env.local
+# Añade tu RESEND_API_KEY y CONTACT_EMAIL
+
+# Correr en desarrollo
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Estructura
+portfolio/
+├── app/
+│   ├── api/contact/route.ts  ← API Route Node.js
+│   ├── globals.css
+│   ├── layout.tsx            ← SEO metadata + JSON-LD
+│   ├── page.tsx
+│   ├── sitemap.ts
+│   └── robots.ts
+├── components/
+│   ├── Nav.tsx
+│   ├── Hero.tsx
+│   ├── CodeMode.tsx
+│   ├── Stats.tsx
+│   ├── About.tsx
+│   ├── Experience.tsx
+│   ├── Projects.tsx
+│   ├── Stack.tsx
+│   ├── Learning.tsx
+│   ├── Education.tsx
+│   ├── Contact.tsx
+│   ├── Footer.tsx
+│   └── Terminal.tsx
+└── lib/
+└── data.ts               ← Todos los datos del portafolio
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Variables de entorno
+```bash
+RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxx
+CONTACT_EMAIL=tu-correo@gmail.com
+```
 
-## Learn More
+## Contacto
 
-To learn more about Next.js, take a look at the following resources:
+- **Email:** geraldmisa0@email.com
+- **GitHub:** [GeraldMisa27](https://github.com/GeraldMisa27)
+- **LinkedIn:** [gerald](https://linkedin.com/in/gerald)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
