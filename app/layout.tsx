@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
-// Next.js descarga y optimiza las fuentes en build time
-// Se sirven desde tu propio dominio sin petición externa a Google
-// Esto mejora el LCP — uno de los Core Web Vitals de la oferta
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -101,17 +99,35 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    // Las variables CSS de las fuentes se pasan al html
-    // --font-inter y --font-mono quedan disponibles en todo el proyecto
     <html lang="es" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
-        {/* JSON-LD datos estructurados para Google */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+
+        {/* Google Tag Manager — carga afterInteractive para no bloquear el LCP
+            strategy="afterInteractive" significa que el script se carga
+            después de que la página ya es interactiva para el usuario */}
+        {process.env.NEXT_PUBLIC_GTM_ID && (
+          <Script
+            id="gtm"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','${process.env.NEXT_PUBLIC_GTM_ID}');
+              `,
+            }}
+          />
+        )}
+      </body>
     </html>
   );
 }
