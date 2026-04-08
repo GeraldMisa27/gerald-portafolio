@@ -1,21 +1,14 @@
 import { PROJECTS } from "@/lib/data";
+import { getPayload } from "payload";
 import { JSX } from "react";
-
+import configPromise from "@payload-config"
 // Colores de los badges según el tipo de proyecto
 const BADGE_STYLES = {
   purple: "bg-[#1a1040] text-[#a78bfa] border-[#4c1d95]",
   blue: "bg-[#0c1a2e] text-[#60a5fa] border-[#1e3a5f]",
   green: "bg-[#0f1f1a] text-[#34d399] border-[#065f46]",
 };
-interface PayloadProject {
-  title?: string;
-  badge?: string;
-  badgeColor?: "purple" | "blue" | "green";
-  description?: string;
-  tags?: { tag?: string }[];
-  mockup?: string;
-  mockupLabel?: string;
-}
+
 // ── Mockup 1: mapa del panel ride-hailing ─────────────────────────────────────
 function RideHailingMockup() {
   return (
@@ -137,51 +130,35 @@ const MOCKUPS: Record<string, () => JSX.Element> = {
 };
 
 // Tipo para los proyectos que vienen de Payload o de data.ts
-interface Project {
-  title: string;
-  badge: string;
-  badgeColor: "purple" | "blue" | "green";
-  description: string;
-  tags: string[];
-  mockup: string;
-  mockupLabel: string;
-}
+
 
 // Obtiene los proyectos desde Payload CMS
 // Si Payload no tiene datos usa lib/data.ts como fallback
-async function getProjects(): Promise<Project[]> {
+async function getProjects() {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
-
-    const res = await fetch(`${baseUrl}/api/projects?limit=100&sort=order`, {
-      // ISR — revalida cada hora sin bloquear al usuario
-      next: { revalidate: 3600 },
+    const payload = await getPayload({ config: configPromise });
+    const data = await payload.find({
+      collection: "projects",
+      limit: 100,
+      sort: "order",
     });
 
-    if (!res.ok) throw new Error("Error al obtener proyectos de Payload");
-
-    const data = await res.json();
-
-    // Si Payload tiene proyectos los devuelve
-if (data.docs && data.docs.length > 0) {
-  return data.docs.map((doc: PayloadProject) => ({
-    title: doc.title ?? "",
-    badge: doc.badge ?? "",
-    badgeColor: doc.badgeColor ?? "purple",
-    description: doc.description ?? "",
-    tags: doc.tags?.map((t: { tag?: string }) => t.tag).filter(Boolean) as string[] ?? [],
-    mockup: doc.mockup ?? "dashboard",
-    mockupLabel: doc.mockupLabel ?? "",
-  }));
-}
+    if (data.docs && data.docs.length > 0) {
+      return data.docs.map((doc) => ({
+        title: doc.title ?? "",
+        badge: doc.badge ?? "",
+        badgeColor: (doc.badgeColor ?? "purple") as "purple" | "blue" | "green",
+        description: doc.description ?? "",
+        tags: doc.tags?.map((t: { tag?: string }) => t.tag).filter(Boolean) as string[] ?? [],
+        mockup: doc.mockup ?? "dashboard",
+        mockupLabel: doc.mockupLabel ?? "",
+      }));
+    }
   } catch {
-    // Si Payload falla usa los datos estáticos silenciosamente
     console.log("[Projects] Usando datos de lib/data.ts como fallback");
   }
-
   return PROJECTS;
 }
-
 // ── Componente principal — Server Component ───────────────────────────────────
 export default async function Projects() {
   const projects = await getProjects();
