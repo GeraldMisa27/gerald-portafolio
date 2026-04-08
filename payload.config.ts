@@ -89,14 +89,12 @@ export default buildConfig({
                 },
                 {
                     name: "mockup",
-                    type: "select",
-                    required: true,
-                    label: "Tipo de mockup",
-                    options: [
-                        { label: "Ride-hailing", value: "rideHailing" },
-                        { label: "Chat IA", value: "chat" },
-                        { label: "Dashboard", value: "dashboard" },
-                    ],
+                    type: "text",
+                    required: false,
+                    label: "Tipo de mockup (rideHailing, chat, dashboard)",
+                    admin: {
+                        description: "Valores disponibles: rideHailing, chat, dashboard. Deja vacío para mockup genérico.",
+                    },
                 },
                 {
                     name: "mockupLabel",
