@@ -99,7 +99,7 @@ export default function Hero({
         </div>
 
         {/* ── Lado derecho: foto circular ── */}
-        <div className="w-60 shrink-0 relative">
+        <div className="w-80 shrink-0 relative">
           <div
             className="absolute inset-0 flex items-center justify-center"
             style={{ background: "linear-gradient(135deg, #12122a, #1a1a3a 40%, #1e1e2e)" }}
@@ -108,9 +108,6 @@ export default function Hero({
             <div className="absolute left-0 top-0 bottom-0 w-20 z-10"
               style={{ background: "linear-gradient(to right, #0a0a0f, transparent)" }} />
 
-            {/* Iniciales decorativas de fondo */}
-            <span className="absolute bottom-5 right-5 text-[64px] font-medium text-[#6366f1] select-none"
-              style={{ opacity: 0.08 }}>GM</span>
 
             {/* Foto circular */}
             <div className="relative z-20">
