@@ -2,9 +2,9 @@ export const SITE = {
   name: "gerald.dev",
   fullName: "Gerald Misa Denis",
   role: "Frontend Developer",
-  email: "geraldmisa0@email.com",
+  email: "geraldmisa0@gmail.com",
   github: "https://github.com/GeraldMisa27",
-  linkedin: "https://linkedin.com/in/gerald",
+  linkedin: "",
   cvUrl: "/cv-gerald-misa.pdf",
   available: true,
 };
