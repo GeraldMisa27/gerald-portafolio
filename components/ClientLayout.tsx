@@ -6,14 +6,22 @@ import CodeMode from "@/components/CodeMode";
 import Footer from "@/components/Footer";
 import Terminal from "@/components/Terminal";
 
+interface Project {
+  title: string;
+  tags: string[];
+  mockupLabel?: string;
+}
+
 // Agrupa todos los Client Components que necesitan estado
 // Separado de page.tsx para que los Server Components no hereden "use client"
 export default function ClientLayout({
   children,
   photoUrl,
+  projects,
 }: {
   children: React.ReactNode;
   photoUrl: string;
+  projects?: Project[];
 }) {
   const [termOpen, setTermOpen] = useState(false);
   const [codeVisible, setCodeVisible] = useState(false);
@@ -35,7 +43,7 @@ export default function ClientLayout({
         {children}
       </main>
       <Footer />
-      <Terminal open={termOpen} onClose={() => setTermOpen(false)} />
+      <Terminal open={termOpen} onClose={() => setTermOpen(false)} projects={projects}/>
     </>
   );
 }

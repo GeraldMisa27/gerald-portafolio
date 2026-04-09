@@ -27,11 +27,42 @@ async function getPhotoUrl(): Promise<string> {
   }
 }
 
+interface PayloadProjectRaw {
+  title?: string;
+  tags?: { tag?: string }[];
+  mockupLabel?: string;
+}
+
+async function getProjectsForTerminal() {
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "";
+    if (!baseUrl) return [];
+    const res = await fetch(`${baseUrl}/api/projects?limit=100&sort=order`, {
+      next: { revalidate: 60 },
+    });
+    if (!res.ok) return [];
+    const data = await res.json();
+    if (data.docs && data.docs.length > 0) {
+      return data.docs.map((doc: PayloadProjectRaw) => ({
+        title: doc.title ?? "",
+        tags: doc.tags?.map((t) => t.tag).filter(Boolean) as string[] ?? [],
+        mockupLabel: doc.mockupLabel ?? "",
+      }));
+    }
+    return [];
+  } catch {
+    return [];
+  }
+}
+
 export default async function Home() {
-  const photoUrl = await getPhotoUrl();
+  const [photoUrl, projects] = await Promise.all([
+    getPhotoUrl(),
+    getProjectsForTerminal(),
+  ]);
 
   return (
-    <ClientLayout photoUrl={photoUrl}>
+    <ClientLayout photoUrl={photoUrl} projects={projects}>
       <Stats />
       <Divider />
       <About />
