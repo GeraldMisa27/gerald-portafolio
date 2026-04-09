@@ -96,7 +96,7 @@ export default function Contact() {
     }
 
     return (
-        <section id="contacto" className="max-w-250 mx-auto px-7 py-12">
+        <section id="contacto" className="w-full max-w-250 mx-auto px-4 md:px-7 py-8 md:py-12">
             <p className="text-[10px] uppercase tracking-[0.14em] text-[#6366f1] mb-2 font-medium">
                 contacto
             </p>

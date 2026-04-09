@@ -4,7 +4,7 @@ import { EXPERIENCE } from "@/lib/data";
 // Server Component — datos estáticos de lib/data.ts
 export default function Experience() {
   return (
-    <section className="max-w-250 mx-auto px-7 py-12">
+    <section className="w-full max-w-250 mx-auto px-4 md:px-7 py-8 md:py-12">
       <p className="text-[10px] uppercase tracking-[0.14em] text-[#6366f1] mb-2 font-medium">
         experiencia laboral
       </p>

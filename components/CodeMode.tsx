@@ -13,7 +13,7 @@ export default function CodeMode({
   if (!visible) return null;
 
   return (
-    <div className="max-w-250 mx-auto px-7 mb-5">
+    <div className="w-full max-w-250 mx-auto px-4 md:px-7 py-8 md:py-12">
       <div className="bg-[#111118] border border-white/10 rounded-xl p-5 font-mono text-sm leading-relaxed">
 
         {/* Header con título y botón cerrar */}
