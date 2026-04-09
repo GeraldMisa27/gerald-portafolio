@@ -81,11 +81,11 @@ export default function Hero({
                     <div className="flex gap-2 flex-wrap">
                         <a href="#proyectos"
                             className="bg-[#6366f1] text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:opacity-80 transition-opacity">
-                            ver proyectos
+                            Ver proyectos
                         </a>
                         <a href="#contacto"
                             className="text-[#a5b4fc] px-5 py-2.5 rounded-lg text-sm border border-white/10 hover:border-[#6366f1] transition-colors">
-                            contactar →
+                            Contactar →
                         </a>
                         <a href={SITE.cvUrl} download
                             className="text-[#4ade80] px-4 py-2.5 rounded-lg text-xs border border-[#166534] hover:bg-[#0f1a0f] transition-colors">
