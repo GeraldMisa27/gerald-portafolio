@@ -1,0 +1,30 @@
+/* Tema del panel de administración de Payload
+   Colores del portafolio de Gerald aplicados al admin */
+
+[data-theme="dark"],
+[data-theme="light"] {
+  --theme-elevation-0: #0a0a0f;
+  --theme-elevation-50: #111118;
+  --theme-elevation-100: #16161f;
+  --theme-elevation-150: #1a1a28;
+  --theme-elevation-200: #1e1e2e;
+  --theme-elevation-250: #252535;
+  --theme-elevation-300: #2d2d40;
+  --theme-elevation-350: #35354a;
+  --theme-elevation-400: #3d3d55;
+  --theme-elevation-450: #454560;
+  --theme-elevation-500: #4d4d6a;
+  --theme-elevation-550: #555575;
+  --theme-elevation-600: #6060808;
+  --theme-elevation-650: #707090;
+  --theme-elevation-700: #8080a0;
+  --theme-elevation-750: #9090b0;
+  --theme-elevation-800: #a0a0c0;
+  --theme-elevation-850: #b0b0d0;
+  --theme-elevation-900: #c0c0e0;
+  --theme-elevation-950: #d0d0f0;
+  --theme-elevation-1000: #ffffff;
+
+  --theme-success-500: #6366f1;
+  --theme-text-link: #a5b4fc;
+}

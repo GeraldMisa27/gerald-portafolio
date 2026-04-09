@@ -4,6 +4,7 @@ import { handleServerFunctions, RootLayout } from "@payloadcms/next/layouts";
 import type { ServerFunctionArgs } from "payload";
 import "@payloadcms/next/css";
 import { importMap } from "./importMap";
+import "./custom.css";
 
 const serverFunction = async (args: ServerFunctionArgs) => {
   "use server";
