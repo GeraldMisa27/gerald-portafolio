@@ -9,7 +9,7 @@ import Contact from "@/components/Contact";
 import Stats from "@/components/Stats";
 
 const Divider = () => (
-  <div className="h-px bg-white/10 w-full max-w-250 mx-auto px-4 md:px-7 py-8 md:py-12" />
+  <div className="h-px bg-white/10 w-full max-w-250 mx-auto" />
 );
 
 // Obtiene la foto desde Payload Settings
