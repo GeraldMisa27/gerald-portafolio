@@ -12,9 +12,10 @@
   --green: #4ade80;
 }
 
-/* Solo aplica al portafolio — excluye el panel de Payload
-   El panel de Payload añade la clase "payload-default" al body */
-body:not(.payload-default) {
+/* Estilos del portafolio — NO aplican al /admin
+   porque el panel de Payload tiene su propio layout
+   con su propio <html> y <body> separados */
+body {
   font-family: var(--font-inter), sans-serif;
   background: var(--bg);
   color: #ffffff;
@@ -24,16 +25,13 @@ code, pre, .font-mono {
   font-family: var(--font-mono), monospace;
 }
 
-/* Scrollbar — solo en el portafolio */
-body:not(.payload-default) ::-webkit-scrollbar { width: 6px; }
-body:not(.payload-default) ::-webkit-scrollbar-track { background: var(--bg); }
-body:not(.payload-default) ::-webkit-scrollbar-thumb { background: var(--bdr); border-radius: 3px; }
-body:not(.payload-default) ::-webkit-scrollbar-thumb:hover { background: var(--acc); }
-
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--bdr); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--acc); }
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
-/* Punto pulsante del badge "disponible" */
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }

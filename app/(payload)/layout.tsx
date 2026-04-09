@@ -5,10 +5,6 @@ import type { ServerFunctionArgs } from "payload";
 import "@payloadcms/next/css";
 import { importMap } from "./importMap";
 
-type Args = {
-  children: React.ReactNode;
-};
-
 const serverFunction = async (args: ServerFunctionArgs) => {
   "use server";
   return handleServerFunctions({
@@ -18,7 +14,7 @@ const serverFunction = async (args: ServerFunctionArgs) => {
   });
 };
 
-export default async function Layout({ children }: Args) {
+export default async function Layout({ children }: { children: React.ReactNode }) {
   return (
     <RootLayout
       config={configPromise}
