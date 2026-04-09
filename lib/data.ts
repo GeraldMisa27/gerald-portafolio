@@ -58,7 +58,7 @@ export const EXPERIENCE = [
       "EXAPRES (–80% tiempo con asistente IA), EXAFACT (facturación con OCR y comparativa visual) y EXABOT (chat con IA tipo ChatGPT con streaming en tiempo real).",
   },
   {
-    date: "2024 → 2026",
+    date: "2023 → 2026",
     title: "Especialista principal — ETI",
     company: "Sistema SGestMan",
     description:
