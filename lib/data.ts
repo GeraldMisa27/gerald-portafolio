@@ -58,8 +58,8 @@ export const EXPERIENCE = [
       "EXAPRES (–80% tiempo con asistente IA), EXAFACT (facturación con OCR y comparativa visual) y EXABOT (chat con IA tipo ChatGPT con streaming en tiempo real).",
   },
   {
-    date: "2022 → 2023",
-    title: "Especialista Frontend — ETI",
+    date: "2024 → 2026",
+    title: "Especialista principal — ETI",
     company: "Sistema SGestMan",
     description:
       "Puente entre usuarios y proveedor externo. Gestión de incidencias, no conformidades y capacitación del equipo.",
@@ -94,7 +94,7 @@ export const PROJECTS = [
     badgeColor: "green" as const,
     description:
       "Especialista principal del sistema. Puente entre usuarios y proveedor externo, gestión de incidencias y capacitación del equipo.",
-    tags: ["React", "Next.js", "Node.js", ".NET APIs"],
+    tags: ["SQL SERVER"],
     mockup: "dashboard" as const,
     mockupLabel: "SGestMan · gestión de incidencias",
     

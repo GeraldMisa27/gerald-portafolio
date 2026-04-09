@@ -10,8 +10,10 @@ import Terminal from "@/components/Terminal";
 // Separado de page.tsx para que los Server Components no hereden "use client"
 export default function ClientLayout({
   children,
+  photoUrl,
 }: {
   children: React.ReactNode;
+  photoUrl: string;
 }) {
   const [termOpen, setTermOpen] = useState(false);
   const [codeVisible, setCodeVisible] = useState(false);
@@ -23,6 +25,7 @@ export default function ClientLayout({
         <Hero
           onToggleCode={() => setCodeVisible((v) => !v)}
           codeVisible={codeVisible}
+          photoUrl={photoUrl}
         />
         <CodeMode
           visible={codeVisible}

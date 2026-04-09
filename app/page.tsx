@@ -8,15 +8,30 @@ import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Stats from "@/components/Stats";
 
-// Server Component — sin "use client"
-// Los Server Components hijos leen datos de Payload directamente
 const Divider = () => (
-  <div className="h-px bg-white/10 max-w-300 mx-auto" />
+  <div className="h-px bg-white/10 max-w-[1200px] mx-auto" />
 );
 
-export default function Home() {
+// Obtiene la foto desde Payload Settings
+async function getPhotoUrl(): Promise<string> {
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+    const res = await fetch(`${baseUrl}/api/globals/settings`, {
+      next: { revalidate: 60 },
+    });
+    if (!res.ok) return "";
+    const data = await res.json();
+    return data.photoUrl ?? "";
+  } catch {
+    return "";
+  }
+}
+
+export default async function Home() {
+  const photoUrl = await getPhotoUrl();
+
   return (
-    <ClientLayout>
+    <ClientLayout photoUrl={photoUrl}>
       <Stats />
       <Divider />
       <About />

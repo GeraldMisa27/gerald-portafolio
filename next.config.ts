@@ -1,6 +1,15 @@
 import { withPayload } from "@payloadcms/next/withPayload";
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {};
+const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**", // acepta cualquier dominio
+      },
+    ],
+  },
+};
 
 export default withPayload(nextConfig);

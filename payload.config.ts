@@ -23,6 +23,38 @@ export default buildConfig({
     // Editor de texto enriquecido
     editor: lexicalEditor({}),
 
+
+    globals: [
+        {
+            slug: "settings",
+            label: "Configuración del portafolio",
+            access: {
+                read: () => true,
+            },
+            fields: [
+                {
+                    name: "photoUrl",
+                    type: "text",
+                    label: "URL de la foto de perfil",
+                    admin: {
+                        description: "Pega aquí la URL directa de tu foto. Ejemplo: https://avatars.githubusercontent.com/u/...",
+                    },
+                },
+                {
+                    name: "available",
+                    type: "checkbox",
+                    label: "¿Disponible para proyectos?",
+                    defaultValue: true,
+                },
+                {
+                    name: "cvUrl",
+                    type: "text",
+                    label: "URL del CV (dejar vacío para usar el archivo local)",
+                },
+            ],
+        },
+    ],
+
     // Colecciones — cada una es una "tabla" en la base de datos
     collections: [
         // Usuarios administradores
