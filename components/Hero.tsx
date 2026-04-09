@@ -44,18 +44,18 @@ export default function Hero({
         <section className="w-full">
             <div className="flex flex-col md:flex-row items-stretch max-w-250 mx-auto overflow-hidden min-h-90">
 
-                {/* ── Lado izquierdo: texto ── */}
-                <div className="flex-1 px-8 py-14 flex flex-col justify-center">
-                    <p className="text-[11px] text-white/50 uppercase tracking-widest mb-4">
+                {/* Lado izquierdo: texto */}
+                <div className="flex-1 px-5 md:px-8 py-10 md:py-14 flex flex-col justify-center">
+                    <p className="text-[10px] md:text-[11px] text-white/50 uppercase tracking-widest mb-4">
                         Frontend Developer ·{" "}
                         <span className="text-[#a5b4fc]">TypeScript · React · Next.js</span>
                     </p>
 
-                    <h1 className="text-[42px] font-medium leading-tight tracking-tight text-white mb-1">
+                    <h1 className="text-[32px] md:text-[42px] font-medium leading-tight tracking-tight text-white mb-1">
                         Hola, soy Gerald.
                     </h1>
 
-                    <div className="flex items-center gap-3 text-[42px] font-medium tracking-tight mb-5 flex-wrap">
+                    <div className="flex items-center gap-3 text-[32px] md:text-[42px] font-medium tracking-tight mb-5 flex-wrap">
                         <span className="text-white">Construyo</span>
                         <span
                             className="text-[#6366f1]"
