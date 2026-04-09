@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const inter = Inter({
@@ -108,6 +109,7 @@ export default function RootLayout({
       </head>
       <body>
         {children}
+        <SpeedInsights />
 
         {/* Google Tag Manager — carga afterInteractive para no bloquear el LCP
             strategy="afterInteractive" significa que el script se carga
