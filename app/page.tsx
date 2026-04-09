@@ -63,6 +63,7 @@ export default async function Home() {
 
   return (
     <ClientLayout photoUrl={photoUrl} projects={projects}>
+      <Divider />
       <Stats />
       <Divider />
       <About />
