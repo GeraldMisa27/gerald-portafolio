@@ -2,11 +2,14 @@ import { withPayload } from "@payloadcms/next/withPayload";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  experimental: {
+    optimizeCss: true,
+  },
   images: {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "**", // acepta cualquier dominio
+        hostname: "**",
       },
     ],
   },
