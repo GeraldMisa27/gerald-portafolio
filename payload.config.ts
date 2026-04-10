@@ -11,10 +11,7 @@ export default buildConfig({
     secret: process.env.PAYLOAD_SECRET!,
 
     // URL base del admin panel
-    serverURL: process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}`
-        : process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
-
+    serverURL: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
     // Panel de administración en /admin
     admin: {
         user: "users",
