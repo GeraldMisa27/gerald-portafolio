@@ -15,7 +15,6 @@ export default buildConfig({
     // Panel de administración en /admin
     admin: {
         user: "users",
-        theme: "dark"
     },
 
     // Editor de texto enriquecido
