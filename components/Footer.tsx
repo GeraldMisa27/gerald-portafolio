@@ -40,7 +40,7 @@ export default function Footer() {
                     <span className="text-[#a5b4fc]">Next.js + Tailwind</span>
                 </p>
                 {time && (
-                    <p className="text-xs text-white/40 text-center sm:text-right">
+                    <p suppressHydrationWarning  className="text-xs text-white/40 text-center sm:text-right">
                         <span className="text-[#4ade80] font-mono">{time}</span>
                         {" "}en La Habana ·{" "}
                         <span className="hidden sm:inline">{status}</span>
