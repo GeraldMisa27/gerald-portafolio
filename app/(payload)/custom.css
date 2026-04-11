@@ -1,7 +1,7 @@
 /* Tema del panel de administración de Payload
    Colores del portafolio de Gerald aplicados al admin */
 
-[data-theme="dark"],
+/* [data-theme="dark"],
 [data-theme="light"] {
   --theme-elevation-0: #0a0a0f;
   --theme-elevation-50: #111118;
@@ -27,4 +27,4 @@
 
   --theme-success-500: #6366f1;
   --theme-text-link: #a5b4fc;
-}
+} */
