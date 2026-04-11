@@ -1,8 +1,8 @@
 import { withPayload } from "@payloadcms/next/withPayload";
 import type { NextConfig } from "next";
 
-const nextConfig = {
-  cssChunking: "strict",
+const nextConfig: NextConfig = {
+  
   images: {
     remotePatterns: [
       {
@@ -11,6 +11,6 @@ const nextConfig = {
       },
     ],
   },
-} satisfies NextConfig & { cssChunking?: string };
+};
 
 export default withPayload(nextConfig);
