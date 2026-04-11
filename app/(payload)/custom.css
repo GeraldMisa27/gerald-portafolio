@@ -1,7 +1,7 @@
 /* Tema del panel de administración de Payload
    Colores del portafolio de Gerald aplicados al admin */
 
-/* [data-theme="dark"] {
+[data-theme="dark"] {
   --theme-success-500: #6366f1;
   --theme-text-link: #a5b4fc;
-} */
+}
