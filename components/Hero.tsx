@@ -121,7 +121,7 @@ export default function Hero({
                                             width={180}
                                             height={180}
                                             className="w-full h-full object-cover object-center"
-                                            priority
+                                            loading="lazy"
                                             sizes="180px"
                                         />
                                     </div>
