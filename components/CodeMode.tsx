@@ -18,12 +18,12 @@ export default function CodeMode({
 
         {/* Header con título y botón cerrar */}
         <div className="flex justify-between items-center mb-3">
-          <span className="text-[10px] text-white/40 uppercase tracking-widest">
+          <span className="text-[10px] text-white/50 uppercase tracking-widest">
             gerald.ts — modo código
           </span>
           <button
             onClick={onClose}
-            className="text-white/40 hover:text-white transition-colors"
+            className="text-white/50 hover:text-white transition-colors"
           >
             ✕
           </button>
@@ -34,60 +34,60 @@ export default function CodeMode({
           <p>
             <span className="text-[#c678dd]">const </span>
             <span className="text-[#98c379]">gerald</span>
-            <span className="text-white/50">: </span>
+            <span className="text-white/60">: </span>
             <span className="text-[#56b6c2]">Developer</span>
-            <span className="text-white/50"> = {"{"}</span>
+            <span className="text-white/60"> = {"{"}</span>
           </p>
           <p>
             &nbsp;&nbsp;
             <span className="text-[#e06c75]">nombre</span>
-            <span className="text-white/50">: </span>
+            <span className="text-white/60">: </span>
             <span className="text-[#98c379]">&quot;Gerald Misa Denis&quot;</span>
-            <span className="text-white/50">, </span>
+            <span className="text-white/60">, </span>
             <span className="text-white/30 italic">{"// Ingeniero → Frontend"}</span>
           </p>
           <p>
             &nbsp;&nbsp;
             <span className="text-[#e06c75]">rol</span>
-            <span className="text-white/50">: </span>
+            <span className="text-white/60">: </span>
             <span className="text-[#98c379]">&quot;Frontend Developer&quot;</span>
-            <span className="text-white/50">,</span>
+            <span className="text-white/60">,</span>
           </p>
           <p>
             &nbsp;&nbsp;
             <span className="text-[#e06c75]">experiencia</span>
-            <span className="text-white/50">: </span>
+            <span className="text-white/60">: </span>
             <span className="text-[#98c379]">&quot;2.5 años&quot;</span>
-            <span className="text-white/50">,</span>
+            <span className="text-white/60">,</span>
           </p>
           <p>
             &nbsp;&nbsp;
             <span className="text-[#e06c75]">disponible</span>
-            <span className="text-white/50">: </span>
+            <span className="text-white/60">: </span>
             <span className="text-[#56b6c2]">true</span>
-            <span className="text-white/50">,</span>
+            <span className="text-white/60">,</span>
           </p>
           <p>
             &nbsp;&nbsp;
             <span className="text-[#e06c75]">stack</span>
-            <span className="text-white/50">: [</span>
+            <span className="text-white/60">: [</span>
             <span className="text-[#98c379]">&quot;TypeScript&quot;</span>
-            <span className="text-white/50">, </span>
+            <span className="text-white/60">, </span>
             <span className="text-[#98c379]">&quot;React&quot;</span>
-            <span className="text-white/50">, </span>
+            <span className="text-white/60">, </span>
             <span className="text-[#98c379]">&quot;Next.js&quot;</span>
-            <span className="text-white/50">, </span>
+            <span className="text-white/60">, </span>
             <span className="text-[#98c379]">&quot;Tailwind&quot;</span>
-            <span className="text-white/50">],</span>
+            <span className="text-white/60">],</span>
           </p>
           <p>
             &nbsp;&nbsp;
             <span className="text-[#e06c75]">contacto</span>
-            <span className="text-white/50">: </span>
+            <span className="text-white/60">: </span>
             <span className="text-[#98c379]">&quot;geraldmisa0@email.com&quot;</span>
-            <span className="text-white/50">,</span>
+            <span className="text-white/60">,</span>
           </p>
-          <p><span className="text-white/50">{"}"}</span></p>
+          <p><span className="text-white/60">{"}"}</span></p>
         </div>
 
       </div>

@@ -46,7 +46,7 @@ export default function Hero({
 
                 {/* Lado izquierdo: texto */}
                 <div className="flex-1 px-5 md:px-8 py-10 md:py-14 flex flex-col justify-center">
-                    <p className="text-[10px] md:text-[11px] text-white/50 uppercase tracking-widest mb-4">
+                    <p className="text-[10px] md:text-[11px] text-white/60 uppercase tracking-widest mb-4">
                         Frontend Developer ·{" "}
                         <span className="text-[#a5b4fc]">TypeScript · React · Next.js</span>
                     </p>
@@ -71,7 +71,7 @@ export default function Hero({
                         </span>
                     </div>
 
-                    <p className="text-sm text-white/60 leading-relaxed max-w-115 mb-6">
+                    <p className="text-sm text-white/70 leading-relaxed max-w-115 mb-6">
                         Ingeniero Automático reconvertido a developer.{" "}
                         <strong className="text-white font-medium">2.5 años</strong>{" "}
                         construyendo productos reales — desde chats con IA hasta
@@ -92,7 +92,7 @@ export default function Hero({
                             ↓ CV.pdf
                         </a>
                         <button onClick={onToggleCode}
-                            className="bg-[#16161f] text-white/60 px-4 py-2.5 rounded-lg text-xs border border-white/10 hover:border-[#6366f1] hover:text-white transition-colors font-mono">
+                            className="bg-[#16161f] text-white/70 px-4 py-2.5 rounded-lg text-xs border border-white/10 hover:border-[#6366f1] hover:text-white transition-colors font-mono">
                             {codeVisible ? "✕" : "</>"}
                         </button>
                     </div>
@@ -134,7 +134,7 @@ export default function Hero({
                                 <div className="relative">
                                     <div className="w-45 h-45 rounded-full border-2 border-[#6366f1] bg-linear-to-b from-[#1e1e38] to-[#252040] flex flex-col items-center justify-center gap-2">
                                         <span className="text-[48px] font-medium text-[#a5b4fc]">GM</span>
-                                        <span className="text-[10px] text-white/40 font-mono">gerald.dev</span>
+                                        <span className="text-[10px] text-white/50 font-mono">gerald.dev</span>
                                     </div>
                                     <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#4ade80] text-[#061206] text-[9px] font-bold px-3 py-1 rounded-full whitespace-nowrap">
                                         ● disponible

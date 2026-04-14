@@ -55,7 +55,7 @@ export default function Nav({ onOpenTerminal }: { onOpenTerminal: () => void }) 
                                 <a
                                     key={link}
                                     href={`#${link.replace(" ", "-")}`}
-                                    className="text-sm text-white/60 hover:text-white transition-colors"
+                                    className="text-sm text-white/70 hover:text-white transition-colors"
                                 >
                                     {link}
                                 </a>
@@ -91,7 +91,7 @@ export default function Nav({ onOpenTerminal }: { onOpenTerminal: () => void }) 
                         <a
                             key={link}
                             href={`#${link.replace(" ", "-")}`}
-                            className="text-sm text-white/60 hover:text-white transition-colors"
+                            className="text-sm text-white/70 hover:text-white transition-colors"
                             onClick={() => setMenuOpen(false)}
                         >
                             {link}

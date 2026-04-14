@@ -19,7 +19,7 @@ export default function Learning() {
         ¿Qué estoy aprendiendo ahora?
       </h2>
 
-      <p className="text-sm text-white/40 mb-6">
+      <p className="text-sm text-white/50 mb-6">
         Tecnologías que estoy estudiando activamente para seguir creciendo.
       </p>
 
@@ -40,7 +40,7 @@ export default function Learning() {
             </div>
 
             {/* Descripción de qué estás aprendiendo */}
-            <p className="text-xs text-white/50 leading-relaxed">
+            <p className="text-xs text-white/60 leading-relaxed">
               {item.description}
             </p>
           </div>

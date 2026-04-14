@@ -11,6 +11,12 @@
     "test:ui": "vitest --ui",
     "test:run": "vitest run"
   },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions"
+  ],
   "dependencies": {
     "@payloadcms/db-mongodb": "^3.82.0",
     "@payloadcms/next": "^3.82.0",
@@ -37,4 +43,5 @@
     "typescript": "^5",
     "vitest": "^4.1.3"
   }
+  
 }

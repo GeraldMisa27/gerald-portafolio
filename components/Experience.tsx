@@ -35,7 +35,7 @@ export default function Experience() {
               <p className="text-sm font-medium text-white mb-0.5">
                 {item.title}
               </p>
-              <p className="text-xs text-white/40 mb-2">
+              <p className="text-xs text-white/50 mb-2">
                 {item.company}
               </p>
               <p className="text-sm text-white/70 leading-relaxed">

@@ -106,7 +106,7 @@ export default function Contact() {
                     <h2 className="text-[22px] font-medium text-white mb-2 tracking-tight text-center">
                         ¿Trabajamos juntos?
                     </h2>
-                    <p className="text-sm text-white/40 mb-8 text-center">
+                    <p className="text-sm text-white/50 mb-8 text-center">
                         Estoy disponible para nuevos proyectos y oportunidades.
                     </p>
 
@@ -151,7 +151,7 @@ export default function Contact() {
 
                             {/* Nombre */}
                             <div className="flex flex-col gap-1.5">
-                                <label className="text-[11px] text-white/40 uppercase tracking-widest">
+                                <label className="text-[11px] text-white/50 uppercase tracking-widest">
                                     Nombre
                                 </label>
                                 <input
@@ -173,7 +173,7 @@ export default function Contact() {
 
                             {/* Email */}
                             <div className="flex flex-col gap-1.5">
-                                <label className="text-[11px] text-white/40 uppercase tracking-widest">
+                                <label className="text-[11px] text-white/50 uppercase tracking-widest">
                                     Email
                                 </label>
                                 <input
@@ -196,7 +196,7 @@ export default function Contact() {
 
                         {/* Mensaje */}
                         <div className="flex flex-col gap-1.5">
-                            <label className="text-[11px] text-white/40 uppercase tracking-widest">
+                            <label className="text-[11px] text-white/50 uppercase tracking-widest">
                                 Mensaje
                             </label>
                             <textarea

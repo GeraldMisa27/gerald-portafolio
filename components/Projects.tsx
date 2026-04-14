@@ -43,7 +43,7 @@ function RideHailingMockup() {
           {[["$2.4k", "GMV hoy"], ["18", "activos"], ["94%", "completados"], ["4.8", "rating"]].map(([num, label]) => (
             <div key={label} className="flex-1 bg-[#13131f] rounded p-1">
               <p className="text-[7px] font-medium text-[#a5b4fc] font-mono">{num}</p>
-              <p className="text-[6px] text-white/40">{label}</p>
+              <p className="text-[6px] text-white/50">{label}</p>
             </div>
           ))}
         </div>
@@ -91,7 +91,7 @@ function DashboardMockup() {
         {[["247", "incidencias"], ["98%", "resueltas"], ["12", "pendientes"], ["5", "equipos"]].map(([num, label]) => (
           <div key={label} className="flex-1 bg-[#13131f] rounded p-1.5">
             <p className="text-[8px] font-medium text-[#a5b4fc] font-mono">{num}</p>
-            <p className="text-[6px] text-white/40">{label}</p>
+            <p className="text-[6px] text-white/50">{label}</p>
           </div>
         ))}
       </div>
@@ -213,7 +213,7 @@ export default async function Projects() {
                     {project.badge}
                   </span>
                 </div>
-                <p className="text-sm text-white/60 leading-relaxed mb-3">
+                <p className="text-sm text-white/70 leading-relaxed mb-3">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-1.5">

@@ -30,10 +30,10 @@ export default function Stack() {
       </h2>
 
       {/* Texto diferente según dispositivo */}
-      <p className="text-xs text-white/40 italic mb-6 hidden md:block">
+      <p className="text-xs text-white/50 italic mb-6 hidden md:block">
         Pasa el cursor sobre una tecnología para ver con cuáles la has combinado
       </p>
-      <p className="text-xs text-white/40 italic mb-6 md:hidden">
+      <p className="text-xs text-white/50 italic mb-6 md:hidden">
         Toca una tecnología para ver con cuáles la has combinado
       </p>
 
@@ -79,7 +79,7 @@ export default function Stack() {
               <p className={`text-xs font-medium ${isSelected ? "text-[#4ade80]" : "text-white"}`}>
                 {tech.name}
               </p>
-              <p className="text-[10px] text-white/40 mt-0.5">{tech.type}</p>
+              <p className="text-[10px] text-white/50 mt-0.5">{tech.type}</p>
             </div>
           );
         })}

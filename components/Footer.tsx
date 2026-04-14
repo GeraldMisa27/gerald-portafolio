@@ -34,13 +34,13 @@ export default function Footer() {
     return (
         <footer className="border-t border-white/10 px-5 md:px-7 py-5">
             <div className="max-w-250 mx-auto flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-1 sm:gap-0">
-                <p className="text-xs text-white/40 text-center sm:text-left">
+                <p className="text-xs text-white/50 text-center sm:text-left">
                     <span className="text-[#a5b4fc]">{SITE.name}</span>
                     {" · "}hecho con{" "}
                     <span className="text-[#a5b4fc]">Next.js + Tailwind</span>
                 </p>
                 {time && (
-                    <p suppressHydrationWarning  className="text-xs text-white/40 text-center sm:text-right">
+                    <p suppressHydrationWarning  className="text-xs text-white/50 text-center sm:text-right">
                         <span className="text-[#4ade80] font-mono">{time}</span>
                         {" "}en La Habana ·{" "}
                         <span className="hidden sm:inline">{status}</span>

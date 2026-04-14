@@ -26,7 +26,7 @@ export default function Education() {
             <p className="text-sm font-medium text-white mb-1">
               {item.title}
             </p>
-            <p className="text-xs text-white/40">
+            <p className="text-xs text-white/50">
               {item.place}
             </p>
           </div>
