@@ -15,10 +15,7 @@ export default buildConfig({
     // Panel de administración en /admin
     admin: {
         user: "users",
-        theme: "dark",
-        // Evita errores de hidratación cuando el documento del admin no coincide
-        // bit a bit con el árbol esperado (p. ej. tema/i18n en el primer paint).
-        suppressHydrationWarning: true,
+        theme: "dark"
     },
 
     // Editor de texto enriquecido

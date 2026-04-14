@@ -12,24 +12,23 @@
   --green: #4ade80;
 }
 
-/* Portafolio público — scoped a `.site` para no afectar /admin (Payload) */
-.site {
-  min-height: 100vh;
+/* Estilos del portafolio — NO aplican al /admin
+   porque el panel de Payload tiene su propio layout
+   con su propio <html> y <body> separados */
+body {
   font-family: var(--font-inter), sans-serif;
   background: var(--bg);
   color: #ffffff;
 }
 
-.site code,
-.site pre,
-.site .font-mono {
+code, pre, .font-mono {
   font-family: var(--font-mono), monospace;
 }
 
-.site ::-webkit-scrollbar { width: 6px; }
-.site ::-webkit-scrollbar-track { background: var(--bg); }
-.site ::-webkit-scrollbar-thumb { background: var(--bdr); border-radius: 3px; }
-.site ::-webkit-scrollbar-thumb:hover { background: var(--acc); }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--bdr); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--acc); }
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
