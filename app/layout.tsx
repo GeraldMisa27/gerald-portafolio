@@ -17,9 +17,6 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://gerald.dev"),
-  alternates: {
-    canonical: "/",
-  },
   title: {
     default: "Gerald Misa Denis — Frontend Developer",
     template: "%s | Gerald Misa Denis",
@@ -70,9 +67,6 @@ export const metadata: Metadata = {
       follow: true,
       "max-image-preview": "large",
     },
-  },
-  verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
 };
 
