@@ -109,13 +109,12 @@ export default function RootLayout({
       <body>
         {children}
 
-        {/* Google Tag Manager — carga afterInteractive para no bloquear el LCP
-            strategy="afterInteractive" significa que el script se carga
-            después de que la página ya es interactiva para el usuario */}
-        {process.env.NEXT_PUBLIC_GTM_ID && (
+        {/* Cargamos GTM en idle (`lazyOnload`) y solo en producción.
+            Evita competir con recursos críticos del LCP en la carga inicial. */}
+        {process.env.NODE_ENV === "production" && process.env.NEXT_PUBLIC_GTM_ID && (
           <Script
             id="gtm"
-            strategy="afterInteractive"
+            strategy="lazyOnload"
             dangerouslySetInnerHTML={{
               __html: `
                 (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

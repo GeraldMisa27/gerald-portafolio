@@ -1,10 +1,14 @@
 "use client";
 import { useState } from "react";
+import dynamic from "next/dynamic";
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
-import CodeMode from "@/components/CodeMode";
 import Footer from "@/components/Footer";
-import Terminal from "@/components/Terminal";
+
+const CodeMode = dynamic(() => import("@/components/CodeMode"));
+const Terminal = dynamic(() => import("@/components/Terminal"), {
+  ssr: false,
+});
 
 interface Project {
   title: string;
