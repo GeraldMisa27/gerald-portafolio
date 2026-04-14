@@ -4,7 +4,7 @@ import Contact from "@/components/Contact";
 
 // ─── Mock del fetch global ────────────────────────────────────────────────────
 // Evita llamadas reales a /api/contact durante los tests
-// Controlamos exactamente qué responde el servidor en cada test
+// Controla exactamente qué responde el servidor en cada test
 const mockFetch = vi.fn();
 global.fetch = mockFetch;
 
