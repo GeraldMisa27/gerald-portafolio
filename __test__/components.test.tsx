@@ -10,10 +10,10 @@ describe("Stats", () => {
     render(<Stats />);
 
     // Verifica que los 4 labels aparecen en el DOM
-    expect(screen.getByText("experiencia en producción")).toBeInTheDocument();
-    expect(screen.getByText("productos entregados")).toBeInTheDocument();
-    expect(screen.getByText("tiempo presupuestación")).toBeInTheDocument();
-    expect(screen.getByText("ganas de aprender")).toBeInTheDocument();
+    expect(screen.getByText("Experiencia en producción")).toBeInTheDocument();
+    expect(screen.getByText("Productos entregados")).toBeInTheDocument();
+    expect(screen.getByText("Tiempo presupuestación")).toBeInTheDocument();
+    expect(screen.getByText("Ganas de aprender")).toBeInTheDocument();
   });
 
   it("renderiza los números correctamente", () => {

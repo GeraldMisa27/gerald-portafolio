@@ -17,10 +17,10 @@ export const ROTATING_WORDS = [
 ];
 
 export const STATS = [
-  { num: "2.5", suffix: " años", label: "experiencia en producción" },
-  { num: "3", suffix: "+", label: "productos entregados" },
-  { num: "–80", suffix: "%", label: "tiempo presupuestación" },
-  { num: "∞", suffix: "", label: "ganas de aprender" },
+  { num: "2.5", suffix: " años", label: "Experiencia en producción" },
+  { num: "3", suffix: "+", label: "Productos entregados" },
+  { num: "–80", suffix: "%", label: "Tiempo presupuestación" },
+  { num: "∞", suffix: "", label: "Ganas de aprender" },
 ];
 
 export const ABOUT = [

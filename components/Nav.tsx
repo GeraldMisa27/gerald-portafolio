@@ -23,7 +23,7 @@ export default function Nav({ onOpenTerminal }: { onOpenTerminal: () => void }) 
         return () => window.removeEventListener("keydown", handler);
     }, [onOpenTerminal]);
 
-    const links = ["sobre mí", "proyectos", "stack", "contacto"];
+    const links = ["Sobre mí", "Proyectos", "Stack", "Contacto"];
 
     return (
         <nav
