@@ -136,7 +136,7 @@ export default function Hero({
                                         <span className="text-[48px] font-medium text-[#a5b4fc]">GM</span>
                                         <span className="text-[10px] text-white/50 font-mono">gerald.dev</span>
                                     </div>
-                                    <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#4ade80] text-[#061206] text-[9px] font-bold px-3 py-1 rounded-full whitespace-nowrap">
+                                    <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#4ade80] text-[#061206] text-[11px] font-bold px-3 py-1 rounded-full whitespace-nowrap">
                                         ● Disponible
                                     </span>
                                 </div>

@@ -15,7 +15,7 @@ export default function Stats() {
                             {stat.num}
                             <span className="text-[#6366f1]">{stat.suffix}</span>
                         </p>
-                        <p className="text-[11px] text-white/50 mt-1">{stat.label}</p>
+                        <p className="text-[12px] text-white/50 mt-1">{stat.label}</p>
                     </div>
                 ))}
             </div>
