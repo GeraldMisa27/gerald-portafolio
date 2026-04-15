@@ -43,7 +43,7 @@ export default function Nav({ onOpenTerminal }: { onOpenTerminal: () => void }) 
                 <div className="flex items-center gap-3">
 
                     {/* Badge disponible — visible siempre en móvil y desktop */}
-                    <span className="flex items-center gap-1.5 text-[14px] bg-[#0f1a0f] text-[#4ade80] px-3 py-1 rounded-full border border-[#166534]">
+                    <span className="flex items-center gap-1.5 text-[10px] bg-[#0f1a0f] text-[#4ade80] px-3 py-1 rounded-full border border-[#166534]">
                         <span className="pulse-dot w-1.5 h-1.5 rounded-full bg-[#4ade80] inline-block" />
                         Disponible
                     </span>
@@ -65,7 +65,7 @@ export default function Nav({ onOpenTerminal }: { onOpenTerminal: () => void }) 
                             onClick={onOpenTerminal}
                             className="flex items-center gap-1.5 bg-[#16161f] border border-[#1e1e2e] rounded-lg px-3 py-1 text-[11px] text-[#9b9bb8] hover:text-white transition-colors cursor-pointer"
                         >
-                            <kbd className="bg-[#0d0d16] border border-[#1e1e2e] rounded px-1 text-[14px] text-[#a5b4fc] font-mono">/</kbd>
+                            <kbd className="bg-[#0d0d16] border border-[#1e1e2e] rounded px-1 text-sm text-[#a5b4fc] font-mono">/</kbd>
                             terminal
                         </button>
                     </div>
