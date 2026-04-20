@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const inter = Inter({
@@ -108,6 +109,7 @@ export default function RootLayout({
       </head>
       <body>
         {children}
+        <SpeedInsights />
 
         {/* Cargamos GTM en idle (`lazyOnload`) y solo en producción.
             Evita competir con recursos críticos del LCP en la carga inicial. */}
